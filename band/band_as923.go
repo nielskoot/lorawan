@@ -18,7 +18,7 @@ func (b *as923Band) Name() string {
 
 func (b *as923Band) GetDefaults() Defaults {
 	return Defaults{
-		RX2Frequency:     923200000,
+		RX2Frequency:     917300000,
 		RX2DataRate:      2,
 		ReceiveDelay1:    time.Second,
 		ReceiveDelay2:    time.Second * 2,
@@ -106,12 +106,12 @@ func newAS923Band(repeaterCompatible bool, dt lorawan.DwellTime) (Band, error) {
 				-14, // 7
 			},
 			uplinkChannels: []Channel{
-				{Frequency: 923200000, MinDR: 0, MaxDR: 5, enabled: true},
-				{Frequency: 923400000, MinDR: 0, MaxDR: 5, enabled: true},
+				{Frequency: 917300000, MinDR: 0, MaxDR: 5, enabled: true},
+				{Frequency: 917500000, MinDR: 0, MaxDR: 5, enabled: true},
 			},
 			downlinkChannels: []Channel{
-				{Frequency: 923200000, MinDR: 0, MaxDR: 5, enabled: true},
-				{Frequency: 923400000, MinDR: 0, MaxDR: 5, enabled: true},
+				{Frequency: 917300000, MinDR: 0, MaxDR: 5, enabled: true},
+				{Frequency: 917500000, MinDR: 0, MaxDR: 5, enabled: true},
 			},
 		},
 	}
